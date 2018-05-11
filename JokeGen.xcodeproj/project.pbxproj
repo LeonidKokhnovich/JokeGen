@@ -18,6 +18,7 @@
 		8421669A20A53B8700BB632D /* SearchJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669920A53B8700BB632D /* SearchJokeViewController.swift */; };
 		8421669C20A53B9300BB632D /* SearchJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669B20A53B9300BB632D /* SearchJokeViewModel.swift */; };
 		8421669E20A53BD200BB632D /* SearchJokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669D20A53BD200BB632D /* SearchJokeManager.swift */; };
+		842166A020A547BD00BB632D /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669F20A547BD00BB632D /* LocalizedStrings.swift */; };
 		CF6705BD927FAE316C11872A /* Pods_JokeGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D542DC4BDC4AA3396A23F51 /* Pods_JokeGen.framework */; };
 		D7A3A84946C40A98F9530EFA /* Pods_JokeGenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10580E2EA47F977C7A80133 /* Pods_JokeGenTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		8421669920A53B8700BB632D /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
 		8421669B20A53B9300BB632D /* SearchJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewModel.swift; sourceTree = "<group>"; };
 		8421669D20A53BD200BB632D /* SearchJokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeManager.swift; sourceTree = "<group>"; };
+		8421669F20A547BD00BB632D /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		8D542DC4BDC4AA3396A23F51 /* Pods_JokeGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JokeGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10580E2EA47F977C7A80133 /* Pods_JokeGenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JokeGenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56CA27934C017ADB3D5D7B3 /* Pods-JokeGen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokeGen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JokeGen/Pods-JokeGen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				8421669820A53B7400BB632D /* SearchJoke */,
 				8421669420A5310300BB632D /* GraphQL */,
 				2687F37E20A51CA2005BC8BD /* AppDelegate.swift */,
+				8421669F20A547BD00BB632D /* LocalizedStrings.swift */,
 				2687F38220A51CA2005BC8BD /* Main.storyboard */,
 				2687F38520A51CA2005BC8BD /* Assets.xcassets */,
 				2687F38720A51CA2005BC8BD /* LaunchScreen.storyboard */,
@@ -430,6 +433,7 @@
 				8421669E20A53BD200BB632D /* SearchJokeManager.swift in Sources */,
 				2687F37F20A51CA2005BC8BD /* AppDelegate.swift in Sources */,
 				8421669A20A53B8700BB632D /* SearchJokeViewController.swift in Sources */,
+				842166A020A547BD00BB632D /* LocalizedStrings.swift in Sources */,
 				8421669C20A53B9300BB632D /* SearchJokeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

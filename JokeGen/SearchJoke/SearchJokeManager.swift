@@ -10,9 +10,17 @@ import Foundation
 import ReactiveSwift
 
 enum SearchJokeManagerError: Error, LocalizedError {
-    case invalidAPI
     case query(Error)
     case emptyData
+    
+    var localizedDescription: String {
+        switch self {
+        case .emptyData:
+            return LocalizedString.notFound
+        case .query(let error):
+            return error.localizedDescription
+        }
+    }
 }
 
 protocol SearchJokeManagerType {

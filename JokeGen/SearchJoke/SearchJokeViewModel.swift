@@ -16,7 +16,7 @@ protocol SearchJokeViewModelType {
 
 class SearchJokeViewModel: SearchJokeViewModelType {
     struct Config {
-        static let inputQueryThrottleTiming = 1.0
+        static let processInputQueryDelay = 0.7
     }
     
     // Dependencies
@@ -38,7 +38,7 @@ class SearchJokeViewModel: SearchJokeViewModelType {
     
     func observeQueryUpdates() {
         query.producer
-            .throttle(Config.inputQueryThrottleTiming, on: QueueScheduler.main)
+            .debounce(Config.processInputQueryDelay, on: QueueScheduler.main)
             .map { $0 ?? "" }
             .startWithValues { [weak self] (query) in
                 guard let strongSelf = self else {
@@ -64,7 +64,7 @@ class SearchJokeViewModel: SearchJokeViewModelType {
                 case .failure(let error):
                     strongSelf.mutableResult.value = error.localizedDescription
                 case .success(let joke):
-                    strongSelf.mutableResult.value = joke.joke ?? "Not found"
+                    strongSelf.mutableResult.value = joke.joke ?? LocalizedString.notFound
                 }
         }
     }
