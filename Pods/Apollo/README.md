@@ -10,17 +10,53 @@ As the generated types are query-specific, you're only able to access data you a
 
 Apollo iOS does more than simply run your queries against a GraphQL server however. It normalizes query results to construct a client-side cache of your data, which is kept up to date as further queries and mutations are run. This means your UI is always internally consistent, and can be kept fully up-to-date with the state on the server with the minimum number of queries required.
 
-This combination of immutable models, one way data flow, and automatic consistency management, leads to a very powerful and elegant programming model that allows you to eliminate common glue code and greatly simplifies app development.
+This combination of models with value semantics, one way data flow, and automatic consistency management, leads to a very powerful and elegant programming model that allows you to eliminate common glue code and greatly simplifies app development.
 
 ## Documentation
 
-Documentation can be found [here](http://dev.apollodata.com/ios/).
+[Read the full docs at apollographql.com/docs/ios/](https://www.apollographql.com/docs/ios/)
+
+## Installation
+
+### Apollo-codegen
+
+Install `apollo-codegen` using `npm`:
+
+```sh
+npm install -g apollo-codegen
+```
+
+### CocoaPods
+
+Include the following in your `Podfile`:
+
+```ruby
+pod 'Apollo', '~> 0.7.0'
+```
+
+The core `Apollo` framework comes with an in-memory cache. You can include an experimental SQLite-based persistent cache by adding the following:
+
+```ruby
+pod 'Apollo/SQLite', '~> 0.7.0'
+```
+
+### Carthage
+
+Include the following in your `Cartfile`:
+
+```
+github "apollographql/apollo-ios" "0.7.0"
+```
+
+Unfortunately Carthage doesn't support resolving prelease versions, so you'll have to update this for new betas.
+
+Because Carthage doesn't allow specifying individual targets, this will build both the core `Apollo` framework and the experimental SQLite-based persistent cache. If you don't need the SQLite support, only drag `Apollo` into your project, avoiding `ApolloSQLite` and `SQLite.swift`.
 
 ## Contributing
 
 [![Build status](https://travis-ci.org/apollographql/apollo-ios.svg?branch=master)](https://travis-ci.org/apollographql/apollo-ios)
 
-This project is being developed using Xcode 8 and Swift 3.
+This project is being developed using Xcode 9 and Swift 4.
 
 If you open `Apollo.xcodeproj`, you should be able to run the tests of the Apollo target.
 
