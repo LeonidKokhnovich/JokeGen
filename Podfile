@@ -7,6 +7,7 @@ target 'JokeGen' do
 
   # Pods for JokeGen
   pod 'Apollo'
+  pod 'ReactiveCocoa', '~> 7.0'
 
   target 'JokeGenTests' do
     inherit! :search_paths

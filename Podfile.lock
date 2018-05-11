@@ -2,17 +2,29 @@ PODS:
   - Apollo (0.8.0):
     - Apollo/Core (= 0.8.0)
   - Apollo/Core (0.8.0)
+  - ReactiveCocoa (7.2.0):
+    - ReactiveSwift (~> 3.1)
+  - ReactiveSwift (3.1.0):
+    - Result (~> 3.2)
+  - Result (3.2.4)
 
 DEPENDENCIES:
   - Apollo
+  - ReactiveCocoa (~> 7.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Apollo
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
 
 SPEC CHECKSUMS:
   Apollo: 66e0f52289551545adb7ecdd994e713fdbae26eb
+  ReactiveCocoa: 476dae7ca790f40d30d186a1bd7ebae4290395d5
+  ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: d5e500ed563a8f94e0c1fc6ff607fe504a980e57
+PODFILE CHECKSUM: 977a9b11f9c6aa6486c87c695617d0b4c8ea0fea
 
 COCOAPODS: 1.5.2
