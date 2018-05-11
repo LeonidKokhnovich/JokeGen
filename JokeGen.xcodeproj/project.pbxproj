@@ -65,7 +65,7 @@
 		70018CB2E60CA91E4EF529F1 /* Pods-JokeGenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokeGenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JokeGenTests/Pods-JokeGenTests.release.xcconfig"; sourceTree = "<group>"; };
 		840D199220A54B45009A5E24 /* SearchJokeManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeManagerMock.swift; sourceTree = "<group>"; };
 		8421669520A5311400BB632D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = JokeGen/API.swift; sourceTree = SOURCE_ROOT; };
-		8421669720A5311F00BB632D /* SearchJokeTableViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; name = SearchJokeTableViewController.graphql; path = JokeGen/SearchJokeTableViewController.graphql; sourceTree = SOURCE_ROOT; };
+		8421669720A5311F00BB632D /* SearchJokeTableViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SearchJokeTableViewController.graphql; sourceTree = "<group>"; };
 		8421669920A53B8700BB632D /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
 		8421669B20A53B9300BB632D /* SearchJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewModel.swift; sourceTree = "<group>"; };
 		8421669D20A53BD200BB632D /* SearchJokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeManager.swift; sourceTree = "<group>"; };
