@@ -1,0 +1,969 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		155A014D1A7EE5503C076A9EFE141988 /* GraphQLQueryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD4D4FDEA8A8F35E6229F845610D9E /* GraphQLQueryWatcher.swift */; };
+		23BE3F69BDCA5A200639C3174FAB1FAF /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E86417E6D003B58C90CD977710898 /* GraphQLOperation.swift */; };
+		2AB00B5F0BDF218C35C4F766E1C0D145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		398D75EF47AB58A131A3485A8F7AA937 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C43A8607DD110F9181ADD23B8A7E344 /* ApolloStore.swift */; };
+		3D19230B3C0444DEE39FA779DA369FBD /* JSONSerializationFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044D3BC94D1C0287E12EA0E7E821C20 /* JSONSerializationFormat.swift */; };
+		5C561C242A7A4715B629D85E1174EC58 /* GraphQLResultReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09C850705DE00D8AB60352D2046674B /* GraphQLResultReader.swift */; };
+		60FBE986128AE6533E63E310E6A1AE83 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D296030A2E070744F5870D824349B66 /* Record.swift */; };
+		69C7B24B3DD406B55D97BED4C64CD650 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746E2FF66F6CC7DCC9C63C1EA7B901A /* Field.swift */; };
+		6ACF9303647ABCA955A7802F71A41F16 /* Pods-JokeGenUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C490A18AA409501107E6AD1C0BBE9588 /* Pods-JokeGenUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BBF3559C6A88EA993E88C3D54E3977B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C67722544B7037762164FEC5F51626 /* Utilities.swift */; };
+		78FC54A8EAAA97F3678E7920BF0453E9 /* Apollo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3A12C7E98B6BDF40826A5B9D0EE256 /* Apollo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F80AE00FCED67FDE5A8A5E004B7A1EC /* Apollo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60507C8D45B80C830922154F0198FA13 /* Apollo-dummy.m */; };
+		7FAB2FEC2B3B6837D5043532EC3149EB /* Fragments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109600102E8E985AE93AA00933B0FD8 /* Fragments.swift */; };
+		908FB567DBE94805CF44964A9A08E179 /* GraphQLTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B9DAD49A00F6A8A4D65866C2D190B2 /* GraphQLTypes.swift */; };
+		90EC6CBD5FD76905FB42ED0544A0BF17 /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3CC6D9BE2AC686A189DF3A1EFF5E3 /* GraphQLResponse.swift */; };
+		998D1B9E613519748D65433C83270BD5 /* GraphQLResultNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01993D7F22DE0F002AD2C89B85972BA4 /* GraphQLResultNormalizer.swift */; };
+		9B1E77A7D2F791727E852177E83C29B4 /* Pods-JokeGenTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 265DDCFCF2053B78677F767BAC075930 /* Pods-JokeGenTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A04D4BDFAFA23594539A5F91F584A0AB /* HTTPNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62EF8080D6F190294D4FA86585FF1D7 /* HTTPNetworkTransport.swift */; };
+		A599211BE5FFEB31858AA9672498A0D6 /* Pods-JokeGen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEB83F8693CD544B4A161D264E6292 /* Pods-JokeGen-dummy.m */; };
+		A5A1E528308731C0B745778A18268816 /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078CC19DB22BA9E8160AB6B1C7C5830 /* GraphQLResult.swift */; };
+		A7A79B0C49E209F8D8D91F0484237308 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CFA6517ADBADEB9CE653658AAF070F /* GraphQLError.swift */; };
+		B022F55B02E1564B22AFFF241027B55B /* Pods-JokeGenUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC2C135CF49807BD10B5AFC19A5DC1 /* Pods-JokeGenUITests-dummy.m */; };
+		B334DD60EA7AE76AD75CC078F86A1E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B6428E9EB6B55138661F5B967780C960 /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE2DD2ACFB4B022CBBA92ECB7031E7 /* RecordSet.swift */; };
+		C1260839E5EFB42CAF6890BED30492ED /* Pods-JokeGenTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B60FC617F777B595493C94CA9A6C29D0 /* Pods-JokeGenTests-dummy.m */; };
+		C3AB45705D57674052AFBB3E7716C8CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C623999C4D802BA24C76B22D9E4813DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C772A6F3EB2C36673C4EA270B357E190 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0855349DC34E93FCCCAF5B50542B3A /* NetworkTransport.swift */; };
+		C954158DF62E7588123FA738575EB7D8 /* check-and-run-apollo-codegen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 635130040197049CF7CE7AF7E3B7B2EF /* check-and-run-apollo-codegen.sh */; };
+		CD9BF2334BE828BD6589E3F1C457AD31 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A114311FFDA92C0D2E813985F5B77 /* AsynchronousOperation.swift */; };
+		D339278572AA7B64DC5F23FC972CDA75 /* JSONStandardTypeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF617B98F5C92C86EA78CE4B352509 /* JSONStandardTypeConversions.swift */; };
+		E3F77538934C61A89EA91CD9C37C1E64 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6399467D28718FD417A35D37EE8A0 /* JSON.swift */; };
+		EBCC6F09BEC6438AAE67044DA72608C3 /* Pods-JokeGen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F54E75E5F10155B258B03B6519EAF4D /* Pods-JokeGen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6198189E1DF7561EF330179B630B4B5 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAEE1DC5FDD28CD781430056553D330 /* ApolloClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60DF9B82695AAC1F38F4DB557A7D5B5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCFA80DBF64DDF6AD6B0926BB8BCAFC4;
+			remoteInfo = Apollo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01993D7F22DE0F002AD2C89B85972BA4 /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultNormalizer.swift; path = Sources/GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
+		02735D88D021607E93DC61C6FF4A94C8 /* Pods-JokeGenUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JokeGenUITests-resources.sh"; sourceTree = "<group>"; };
+		062E88E56731059DE5BA71466CD9A7AD /* Pods-JokeGenUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JokeGenUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1095C5F045E1C7D10B121D385F5D1C7C /* Pods_JokeGenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JokeGenUITests.framework; path = "Pods-JokeGenUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		113E86417E6D003B58C90CD977710898 /* GraphQLOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLOperation.swift; path = Sources/GraphQLOperation.swift; sourceTree = "<group>"; };
+		1165F666FCB59B07E45569A6274C18F0 /* Pods-JokeGen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JokeGen.debug.xcconfig"; sourceTree = "<group>"; };
+		17DE2DD2ACFB4B022CBBA92ECB7031E7 /* RecordSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordSet.swift; path = Sources/RecordSet.swift; sourceTree = "<group>"; };
+		2044D3BC94D1C0287E12EA0E7E821C20 /* JSONSerializationFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONSerializationFormat.swift; path = Sources/JSONSerializationFormat.swift; sourceTree = "<group>"; };
+		265DDCFCF2053B78677F767BAC075930 /* Pods-JokeGenTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JokeGenTests-umbrella.h"; sourceTree = "<group>"; };
+		2969C58C6DA5F47F36D2D360280800F2 /* Pods-JokeGen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JokeGen-frameworks.sh"; sourceTree = "<group>"; };
+		2A96905DAEDBCC3744C15C8016C82C6A /* Apollo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Apollo.xcconfig; sourceTree = "<group>"; };
+		3D296030A2E070744F5870D824349B66 /* Record.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Record.swift; path = Sources/Record.swift; sourceTree = "<group>"; };
+		3F259DB29D5ACBA05ECB3D5F5F6BE7CA /* Pods-JokeGenTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JokeGenTests-frameworks.sh"; sourceTree = "<group>"; };
+		3F54E75E5F10155B258B03B6519EAF4D /* Pods-JokeGen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JokeGen-umbrella.h"; sourceTree = "<group>"; };
+		3FFAB357BA8CB592C6E215862295552B /* Pods-JokeGenTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JokeGenTests.modulemap"; sourceTree = "<group>"; };
+		45C67722544B7037762164FEC5F51626 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = Sources/Utilities.swift; sourceTree = "<group>"; };
+		46C6399467D28718FD417A35D37EE8A0 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/JSON.swift; sourceTree = "<group>"; };
+		4746E2FF66F6CC7DCC9C63C1EA7B901A /* Field.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Field.swift; path = Sources/Field.swift; sourceTree = "<group>"; };
+		4A65CF7B0AB7DA89F20FA6D9C0C41395 /* Pods-JokeGenTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JokeGenTests-resources.sh"; sourceTree = "<group>"; };
+		4E4A0B3669C0A9489531573EF28C6919 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5109600102E8E985AE93AA00933B0FD8 /* Fragments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fragments.swift; path = Sources/Fragments.swift; sourceTree = "<group>"; };
+		51CDD4EEC871791714106D61A92C4F2A /* Pods_JokeGenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JokeGenTests.framework; path = "Pods-JokeGenTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A9891E2C4C18285302E684CDF5AA26 /* Apollo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-prefix.pch"; sourceTree = "<group>"; };
+		568B0F3E3F2C685A2D8C427592359F2C /* Pods-JokeGenTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JokeGenTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5C0855349DC34E93FCCCAF5B50542B3A /* NetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkTransport.swift; path = Sources/NetworkTransport.swift; sourceTree = "<group>"; };
+		60507C8D45B80C830922154F0198FA13 /* Apollo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Apollo-dummy.m"; sourceTree = "<group>"; };
+		617DF5FA1719BEF09A95D17A833A6A6A /* Pods-JokeGenTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JokeGenTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		635130040197049CF7CE7AF7E3B7B2EF /* check-and-run-apollo-codegen.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = "check-and-run-apollo-codegen.sh"; path = "scripts/check-and-run-apollo-codegen.sh"; sourceTree = "<group>"; };
+		64FD4D4FDEA8A8F35E6229F845610D9E /* GraphQLQueryWatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLQueryWatcher.swift; path = Sources/GraphQLQueryWatcher.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6ADEB83F8693CD544B4A161D264E6292 /* Pods-JokeGen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JokeGen-dummy.m"; sourceTree = "<group>"; };
+		6DD3EEADFED8B2573DC856B4E191A7D8 /* Pods-JokeGen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JokeGen-resources.sh"; sourceTree = "<group>"; };
+		70896719C73346D0D6E24BD2F3C92759 /* Pods-JokeGenUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JokeGenUITests-frameworks.sh"; sourceTree = "<group>"; };
+		718009B780C7C32D480C394389534532 /* Pods-JokeGenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JokeGenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D0DC62710CF52D8213228E0CEF666B1 /* Pods-JokeGenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JokeGenTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BEF617B98F5C92C86EA78CE4B352509 /* JSONStandardTypeConversions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONStandardTypeConversions.swift; path = Sources/JSONStandardTypeConversions.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		956381CA2355280C6A19C160494086BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9667850E3EB8AE6D5512DF0ED3A2F1D5 /* Pods-JokeGen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JokeGen.release.xcconfig"; sourceTree = "<group>"; };
+		97D3CC6D9BE2AC686A189DF3A1EFF5E3 /* GraphQLResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResponse.swift; path = Sources/GraphQLResponse.swift; sourceTree = "<group>"; };
+		9C43A8607DD110F9181ADD23B8A7E344 /* ApolloStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloStore.swift; path = Sources/ApolloStore.swift; sourceTree = "<group>"; };
+		A448530009940504D00B3EE1AB7D96FD /* Pods-JokeGen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JokeGen-acknowledgements.plist"; sourceTree = "<group>"; };
+		B60FC617F777B595493C94CA9A6C29D0 /* Pods-JokeGenTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JokeGenTests-dummy.m"; sourceTree = "<group>"; };
+		BA3A12C7E98B6BDF40826A5B9D0EE256 /* Apollo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-umbrella.h"; sourceTree = "<group>"; };
+		BDDAA44F5D4DB5428D06E8B54302F2C8 /* Pods_JokeGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JokeGen.framework; path = "Pods-JokeGen.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C078CC19DB22BA9E8160AB6B1C7C5830 /* GraphQLResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResult.swift; path = Sources/GraphQLResult.swift; sourceTree = "<group>"; };
+		C09C850705DE00D8AB60352D2046674B /* GraphQLResultReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultReader.swift; path = Sources/GraphQLResultReader.swift; sourceTree = "<group>"; };
+		C490A18AA409501107E6AD1C0BBE9588 /* Pods-JokeGenUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JokeGenUITests-umbrella.h"; sourceTree = "<group>"; };
+		C7CFA6517ADBADEB9CE653658AAF070F /* GraphQLError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLError.swift; path = Sources/GraphQLError.swift; sourceTree = "<group>"; };
+		C96A114311FFDA92C0D2E813985F5B77 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsynchronousOperation.swift; path = Sources/AsynchronousOperation.swift; sourceTree = "<group>"; };
+		CAD0AF1E936AAFB7A1E932BB1DE0BBB6 /* Pods-JokeGenUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JokeGenUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CB2BA15AC391604029852C8AA8658862 /* Pods-JokeGenUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JokeGenUITests.modulemap"; sourceTree = "<group>"; };
+		CECE15B5C13940F408CCF22AF7A0025E /* Pods-JokeGen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JokeGen.modulemap"; sourceTree = "<group>"; };
+		D1C1ED17F1F47613A00FA2B7D3F63F70 /* Apollo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Apollo.modulemap; sourceTree = "<group>"; };
+		D1F963EAE37E166B993B5D92950AE83A /* Pods-JokeGenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JokeGenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2DC2C135CF49807BD10B5AFC19A5DC1 /* Pods-JokeGenUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JokeGenUITests-dummy.m"; sourceTree = "<group>"; };
+		D3EFDD641A4B9D1CEF9AE1392AEB6392 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBC74DC61727E6354526E67C657E9E8 /* Pods-JokeGen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JokeGen-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DEAEE1DC5FDD28CD781430056553D330 /* ApolloClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloClient.swift; path = Sources/ApolloClient.swift; sourceTree = "<group>"; };
+		E2B9DAD49A00F6A8A4D65866C2D190B2 /* GraphQLTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLTypes.swift; path = Sources/GraphQLTypes.swift; sourceTree = "<group>"; };
+		E60AA2B92EB3BE9AB46FDEFAF3F06A3D /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Apollo.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD854C54A660D50046C724168305E9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16E2EBF4A5ED5AA834B8781DAFC43FB /* Pods-JokeGenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JokeGenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F62EF8080D6F190294D4FA86585FF1D7 /* HTTPNetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPNetworkTransport.swift; path = Sources/HTTPNetworkTransport.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59E2061D3CFE0367CC271EEE7475412A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3AB45705D57674052AFBB3E7716C8CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D44C95DE65FDCDEFC7BF62E9BD34B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B334DD60EA7AE76AD75CC078F86A1E9B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD88D6D6C7F2ED5075CE0780B70230 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C623999C4D802BA24C76B22D9E4813DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDF04EF1AF6CFC500A13B69A8DCA018A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AB00B5F0BDF218C35C4F766E1C0D145 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11148A5F7BAAC4EBC3C863A6368A967F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1C1ED17F1F47613A00FA2B7D3F63F70 /* Apollo.modulemap */,
+				2A96905DAEDBCC3744C15C8016C82C6A /* Apollo.xcconfig */,
+				60507C8D45B80C830922154F0198FA13 /* Apollo-dummy.m */,
+				54A9891E2C4C18285302E684CDF5AA26 /* Apollo-prefix.pch */,
+				BA3A12C7E98B6BDF40826A5B9D0EE256 /* Apollo-umbrella.h */,
+				4E4A0B3669C0A9489531573EF28C6919 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Apollo";
+			sourceTree = "<group>";
+		};
+		1F3FEA63B774C1C6D27582AF0EB3489E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E60AA2B92EB3BE9AB46FDEFAF3F06A3D /* Apollo.framework */,
+				BDDAA44F5D4DB5428D06E8B54302F2C8 /* Pods_JokeGen.framework */,
+				51CDD4EEC871791714106D61A92C4F2A /* Pods_JokeGenTests.framework */,
+				1095C5F045E1C7D10B121D385F5D1C7C /* Pods_JokeGenUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2254E3FA1AEA27BB551E3702F5311B7B /* Pods-JokeGenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3EFDD641A4B9D1CEF9AE1392AEB6392 /* Info.plist */,
+				CB2BA15AC391604029852C8AA8658862 /* Pods-JokeGenUITests.modulemap */,
+				062E88E56731059DE5BA71466CD9A7AD /* Pods-JokeGenUITests-acknowledgements.markdown */,
+				CAD0AF1E936AAFB7A1E932BB1DE0BBB6 /* Pods-JokeGenUITests-acknowledgements.plist */,
+				D2DC2C135CF49807BD10B5AFC19A5DC1 /* Pods-JokeGenUITests-dummy.m */,
+				70896719C73346D0D6E24BD2F3C92759 /* Pods-JokeGenUITests-frameworks.sh */,
+				02735D88D021607E93DC61C6FF4A94C8 /* Pods-JokeGenUITests-resources.sh */,
+				C490A18AA409501107E6AD1C0BBE9588 /* Pods-JokeGenUITests-umbrella.h */,
+				D1F963EAE37E166B993B5D92950AE83A /* Pods-JokeGenUITests.debug.xcconfig */,
+				F16E2EBF4A5ED5AA834B8781DAFC43FB /* Pods-JokeGenUITests.release.xcconfig */,
+			);
+			name = "Pods-JokeGenUITests";
+			path = "Target Support Files/Pods-JokeGenUITests";
+			sourceTree = "<group>";
+		};
+		2458D0D60C5E430E9F7E433D60A9C474 /* Pods-JokeGenTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFD854C54A660D50046C724168305E9B /* Info.plist */,
+				3FFAB357BA8CB592C6E215862295552B /* Pods-JokeGenTests.modulemap */,
+				568B0F3E3F2C685A2D8C427592359F2C /* Pods-JokeGenTests-acknowledgements.markdown */,
+				617DF5FA1719BEF09A95D17A833A6A6A /* Pods-JokeGenTests-acknowledgements.plist */,
+				B60FC617F777B595493C94CA9A6C29D0 /* Pods-JokeGenTests-dummy.m */,
+				3F259DB29D5ACBA05ECB3D5F5F6BE7CA /* Pods-JokeGenTests-frameworks.sh */,
+				4A65CF7B0AB7DA89F20FA6D9C0C41395 /* Pods-JokeGenTests-resources.sh */,
+				265DDCFCF2053B78677F767BAC075930 /* Pods-JokeGenTests-umbrella.h */,
+				718009B780C7C32D480C394389534532 /* Pods-JokeGenTests.debug.xcconfig */,
+				7D0DC62710CF52D8213228E0CEF666B1 /* Pods-JokeGenTests.release.xcconfig */,
+			);
+			name = "Pods-JokeGenTests";
+			path = "Target Support Files/Pods-JokeGenTests";
+			sourceTree = "<group>";
+		};
+		482F5A89884EB28B95D040A70FF76C56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C658A8F6803F7F306CCF378C8FDACCC /* Apollo */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				482F5A89884EB28B95D040A70FF76C56 /* Pods */,
+				1F3FEA63B774C1C6D27582AF0EB3489E /* Products */,
+				858349B638E2D9D6C31CB9A08BC8A1C1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80EDE30A46591752024AD451DC922639 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				635130040197049CF7CE7AF7E3B7B2EF /* check-and-run-apollo-codegen.sh */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		858349B638E2D9D6C31CB9A08BC8A1C1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE8C5AF2AE3794FA42887B5B5452AAB6 /* Pods-JokeGen */,
+				2458D0D60C5E430E9F7E433D60A9C474 /* Pods-JokeGenTests */,
+				2254E3FA1AEA27BB551E3702F5311B7B /* Pods-JokeGenUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8C658A8F6803F7F306CCF378C8FDACCC /* Apollo */ = {
+			isa = PBXGroup;
+			children = (
+				DEAEE1DC5FDD28CD781430056553D330 /* ApolloClient.swift */,
+				9C43A8607DD110F9181ADD23B8A7E344 /* ApolloStore.swift */,
+				C96A114311FFDA92C0D2E813985F5B77 /* AsynchronousOperation.swift */,
+				4746E2FF66F6CC7DCC9C63C1EA7B901A /* Field.swift */,
+				5109600102E8E985AE93AA00933B0FD8 /* Fragments.swift */,
+				C7CFA6517ADBADEB9CE653658AAF070F /* GraphQLError.swift */,
+				113E86417E6D003B58C90CD977710898 /* GraphQLOperation.swift */,
+				64FD4D4FDEA8A8F35E6229F845610D9E /* GraphQLQueryWatcher.swift */,
+				97D3CC6D9BE2AC686A189DF3A1EFF5E3 /* GraphQLResponse.swift */,
+				C078CC19DB22BA9E8160AB6B1C7C5830 /* GraphQLResult.swift */,
+				01993D7F22DE0F002AD2C89B85972BA4 /* GraphQLResultNormalizer.swift */,
+				C09C850705DE00D8AB60352D2046674B /* GraphQLResultReader.swift */,
+				E2B9DAD49A00F6A8A4D65866C2D190B2 /* GraphQLTypes.swift */,
+				F62EF8080D6F190294D4FA86585FF1D7 /* HTTPNetworkTransport.swift */,
+				46C6399467D28718FD417A35D37EE8A0 /* JSON.swift */,
+				2044D3BC94D1C0287E12EA0E7E821C20 /* JSONSerializationFormat.swift */,
+				8BEF617B98F5C92C86EA78CE4B352509 /* JSONStandardTypeConversions.swift */,
+				5C0855349DC34E93FCCCAF5B50542B3A /* NetworkTransport.swift */,
+				3D296030A2E070744F5870D824349B66 /* Record.swift */,
+				17DE2DD2ACFB4B022CBBA92ECB7031E7 /* RecordSet.swift */,
+				45C67722544B7037762164FEC5F51626 /* Utilities.swift */,
+				80EDE30A46591752024AD451DC922639 /* Resources */,
+				11148A5F7BAAC4EBC3C863A6368A967F /* Support Files */,
+			);
+			name = Apollo;
+			path = Apollo;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE8C5AF2AE3794FA42887B5B5452AAB6 /* Pods-JokeGen */ = {
+			isa = PBXGroup;
+			children = (
+				956381CA2355280C6A19C160494086BE /* Info.plist */,
+				CECE15B5C13940F408CCF22AF7A0025E /* Pods-JokeGen.modulemap */,
+				DBBC74DC61727E6354526E67C657E9E8 /* Pods-JokeGen-acknowledgements.markdown */,
+				A448530009940504D00B3EE1AB7D96FD /* Pods-JokeGen-acknowledgements.plist */,
+				6ADEB83F8693CD544B4A161D264E6292 /* Pods-JokeGen-dummy.m */,
+				2969C58C6DA5F47F36D2D360280800F2 /* Pods-JokeGen-frameworks.sh */,
+				6DD3EEADFED8B2573DC856B4E191A7D8 /* Pods-JokeGen-resources.sh */,
+				3F54E75E5F10155B258B03B6519EAF4D /* Pods-JokeGen-umbrella.h */,
+				1165F666FCB59B07E45569A6274C18F0 /* Pods-JokeGen.debug.xcconfig */,
+				9667850E3EB8AE6D5512DF0ED3A2F1D5 /* Pods-JokeGen.release.xcconfig */,
+			);
+			name = "Pods-JokeGen";
+			path = "Target Support Files/Pods-JokeGen";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4045647E3D429690F88A9CDE936F7EC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78FC54A8EAAA97F3678E7920BF0453E9 /* Apollo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62C1BC48D1AF46E211A8F65E10197366 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ACF9303647ABCA955A7802F71A41F16 /* Pods-JokeGenUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432E4B3A91CB0CA708195AB20242CC9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBCC6F09BEC6438AAE67044DA72608C3 /* Pods-JokeGen-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D16448A287867302CB87FAB23F7B71E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1E77A7D2F791727E852177E83C29B4 /* Pods-JokeGenTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3DDEBA35DACE4DFF2AB2D334A3A73869 /* Pods-JokeGenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 255C821EF08205D31EDC07838197A70E /* Build configuration list for PBXNativeTarget "Pods-JokeGenTests" */;
+			buildPhases = (
+				D4F12C501AA38D0AFBBB229F825D4CDB /* Sources */,
+				59E2061D3CFE0367CC271EEE7475412A /* Frameworks */,
+				D16448A287867302CB87FAB23F7B71E6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JokeGenTests";
+			productName = "Pods-JokeGenTests";
+			productReference = 51CDD4EEC871791714106D61A92C4F2A /* Pods_JokeGenTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4FE4C24EAC77611C81AFB379EB401A55 /* Pods-JokeGenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B76E5A31F3F18AB65F8CA97A76A47A54 /* Build configuration list for PBXNativeTarget "Pods-JokeGenUITests" */;
+			buildPhases = (
+				081EE983C6AC1EBA223217E2F4A2B7B4 /* Sources */,
+				A5AD88D6D6C7F2ED5075CE0780B70230 /* Frameworks */,
+				62C1BC48D1AF46E211A8F65E10197366 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JokeGenUITests";
+			productName = "Pods-JokeGenUITests";
+			productReference = 1095C5F045E1C7D10B121D385F5D1C7C /* Pods_JokeGenUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		85A452321C7B7E9DEF6CA54C1F622E8F /* Pods-JokeGen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA12AC2CE0FB4D1000798E33EB824B58 /* Build configuration list for PBXNativeTarget "Pods-JokeGen" */;
+			buildPhases = (
+				B6FC6AAA1329911DCDDE16D3B81F3A2E /* Sources */,
+				EDF04EF1AF6CFC500A13B69A8DCA018A /* Frameworks */,
+				8432E4B3A91CB0CA708195AB20242CC9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEB0CECEBF4CAFAEE61CAA26C4C861B0 /* PBXTargetDependency */,
+			);
+			name = "Pods-JokeGen";
+			productName = "Pods-JokeGen";
+			productReference = BDDAA44F5D4DB5428D06E8B54302F2C8 /* Pods_JokeGen.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BCFA80DBF64DDF6AD6B0926BB8BCAFC4 /* Apollo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C76CD6B4669B5BF50266991C9350B483 /* Build configuration list for PBXNativeTarget "Apollo" */;
+			buildPhases = (
+				E52F1B36EC4225A3E68E6D00FCFE01B1 /* Sources */,
+				A0D44C95DE65FDCDEFC7BF62E9BD34B2 /* Frameworks */,
+				222F00BED4CAAAB0EC77313742BD74BE /* Resources */,
+				4045647E3D429690F88A9CDE936F7EC5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Apollo;
+			productName = Apollo;
+			productReference = E60AA2B92EB3BE9AB46FDEFAF3F06A3D /* Apollo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1F3FEA63B774C1C6D27582AF0EB3489E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCFA80DBF64DDF6AD6B0926BB8BCAFC4 /* Apollo */,
+				85A452321C7B7E9DEF6CA54C1F622E8F /* Pods-JokeGen */,
+				3DDEBA35DACE4DFF2AB2D334A3A73869 /* Pods-JokeGenTests */,
+				4FE4C24EAC77611C81AFB379EB401A55 /* Pods-JokeGenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		222F00BED4CAAAB0EC77313742BD74BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C954158DF62E7588123FA738575EB7D8 /* check-and-run-apollo-codegen.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		081EE983C6AC1EBA223217E2F4A2B7B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B022F55B02E1564B22AFFF241027B55B /* Pods-JokeGenUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6FC6AAA1329911DCDDE16D3B81F3A2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A599211BE5FFEB31858AA9672498A0D6 /* Pods-JokeGen-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F12C501AA38D0AFBBB229F825D4CDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1260839E5EFB42CAF6890BED30492ED /* Pods-JokeGenTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E52F1B36EC4225A3E68E6D00FCFE01B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F80AE00FCED67FDE5A8A5E004B7A1EC /* Apollo-dummy.m in Sources */,
+				F6198189E1DF7561EF330179B630B4B5 /* ApolloClient.swift in Sources */,
+				398D75EF47AB58A131A3485A8F7AA937 /* ApolloStore.swift in Sources */,
+				CD9BF2334BE828BD6589E3F1C457AD31 /* AsynchronousOperation.swift in Sources */,
+				69C7B24B3DD406B55D97BED4C64CD650 /* Field.swift in Sources */,
+				7FAB2FEC2B3B6837D5043532EC3149EB /* Fragments.swift in Sources */,
+				A7A79B0C49E209F8D8D91F0484237308 /* GraphQLError.swift in Sources */,
+				23BE3F69BDCA5A200639C3174FAB1FAF /* GraphQLOperation.swift in Sources */,
+				155A014D1A7EE5503C076A9EFE141988 /* GraphQLQueryWatcher.swift in Sources */,
+				90EC6CBD5FD76905FB42ED0544A0BF17 /* GraphQLResponse.swift in Sources */,
+				A5A1E528308731C0B745778A18268816 /* GraphQLResult.swift in Sources */,
+				998D1B9E613519748D65433C83270BD5 /* GraphQLResultNormalizer.swift in Sources */,
+				5C561C242A7A4715B629D85E1174EC58 /* GraphQLResultReader.swift in Sources */,
+				908FB567DBE94805CF44964A9A08E179 /* GraphQLTypes.swift in Sources */,
+				A04D4BDFAFA23594539A5F91F584A0AB /* HTTPNetworkTransport.swift in Sources */,
+				E3F77538934C61A89EA91CD9C37C1E64 /* JSON.swift in Sources */,
+				3D19230B3C0444DEE39FA779DA369FBD /* JSONSerializationFormat.swift in Sources */,
+				D339278572AA7B64DC5F23FC972CDA75 /* JSONStandardTypeConversions.swift in Sources */,
+				C772A6F3EB2C36673C4EA270B357E190 /* NetworkTransport.swift in Sources */,
+				60FBE986128AE6533E63E310E6A1AE83 /* Record.swift in Sources */,
+				B6428E9EB6B55138661F5B967780C960 /* RecordSet.swift in Sources */,
+				6BBF3559C6A88EA993E88C3D54E3977B /* Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEB0CECEBF4CAFAEE61CAA26C4C861B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Apollo;
+			target = BCFA80DBF64DDF6AD6B0926BB8BCAFC4 /* Apollo */;
+			targetProxy = 60DF9B82695AAC1F38F4DB557A7D5B5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B5A8DE2EC6E5A64185B0A167D0A4AD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		17A537C86E62E26F341462950A7B3FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A96905DAEDBCC3744C15C8016C82C6A /* Apollo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Apollo/Apollo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Apollo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Apollo/Apollo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Apollo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44A1B0E65F9CDD47AE1F93192EAB013F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1F963EAE37E166B993B5D92950AE83A /* Pods-JokeGenUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JokeGenUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JokeGenUITests/Pods-JokeGenUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JokeGenUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C8445ACB7004D051961BFFCF018A6AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1165F666FCB59B07E45569A6274C18F0 /* Pods-JokeGen.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JokeGen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JokeGen/Pods-JokeGen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JokeGen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C919B4836718AD356751140912EFD7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718009B780C7C32D480C394389534532 /* Pods-JokeGenTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JokeGenTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JokeGenTests/Pods-JokeGenTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JokeGenTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B804B74D9B0DBF2AFAB106989D74CB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D0DC62710CF52D8213228E0CEF666B1 /* Pods-JokeGenTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JokeGenTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JokeGenTests/Pods-JokeGenTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JokeGenTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8066994A5E3715999B3CC2B6AACFD416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9667850E3EB8AE6D5512DF0ED3A2F1D5 /* Pods-JokeGen.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JokeGen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JokeGen/Pods-JokeGen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JokeGen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A6B30A3364CDFEFF5A260CA2BA643A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A96905DAEDBCC3744C15C8016C82C6A /* Apollo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Apollo/Apollo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Apollo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Apollo/Apollo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Apollo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ABC1C622E3A94D5EFA80B6DBB5E64193 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEEED98A2E5043742280851DAB16EFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F16E2EBF4A5ED5AA834B8781DAFC43FB /* Pods-JokeGenUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JokeGenUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JokeGenUITests/Pods-JokeGenUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JokeGenUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		255C821EF08205D31EDC07838197A70E /* Build configuration list for PBXNativeTarget "Pods-JokeGenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C919B4836718AD356751140912EFD7A /* Debug */,
+				7B804B74D9B0DBF2AFAB106989D74CB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B5A8DE2EC6E5A64185B0A167D0A4AD1 /* Debug */,
+				ABC1C622E3A94D5EFA80B6DBB5E64193 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B76E5A31F3F18AB65F8CA97A76A47A54 /* Build configuration list for PBXNativeTarget "Pods-JokeGenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44A1B0E65F9CDD47AE1F93192EAB013F /* Debug */,
+				BEEED98A2E5043742280851DAB16EFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C76CD6B4669B5BF50266991C9350B483 /* Build configuration list for PBXNativeTarget "Apollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A537C86E62E26F341462950A7B3FC6 /* Debug */,
+				A6B30A3364CDFEFF5A260CA2BA643A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA12AC2CE0FB4D1000798E33EB824B58 /* Build configuration list for PBXNativeTarget "Pods-JokeGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C8445ACB7004D051961BFFCF018A6AA /* Debug */,
+				8066994A5E3715999B3CC2B6AACFD416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
