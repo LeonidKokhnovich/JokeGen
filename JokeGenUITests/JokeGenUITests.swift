@@ -10,7 +10,7 @@ import XCTest
 
 class JokeGenUITests: XCTestCase {
     struct Config {
-        static let searchTimeout = 3.0
+        static let searchTimeout = 1.0
         static let notFoundError = "Not found"
     }
         
@@ -32,12 +32,11 @@ class JokeGenUITests: XCTestCase {
         super.tearDown()
     }
     
-    func checkSearchResultContaining(text: String) {
-        let substringPredicate = NSPredicate(format: "%K contains %@", "text", text)
-        let label = XCUIApplication().textViews.containing(substringPredicate)
-        let existsPredicate = NSPredicate(format: "exists == 1")
+    func checkSearchResult(text: String, shouldExist: Bool = true) {
+        let label = XCUIApplication().textViews[text]
+        let exists = NSPredicate(format: "exists \(shouldExist ? "==" : "!=") 1")
         
-        expectation(for: existsPredicate, evaluatedWith: label, handler: nil)
+        expectation(for: exists, evaluatedWith: label, handler: nil)
         waitForExpectations(timeout: Config.searchTimeout, handler: nil)
     }
     
@@ -45,9 +44,9 @@ class JokeGenUITests: XCTestCase {
         let searchQueryTextField = XCUIApplication().textFields.firstMatch
         XCTAssertTrue(searchQueryTextField.exists)
         searchQueryTextField.tap()
-        searchQueryTextField.typeText("c")
+        searchQueryTextField.typeText("catdog")
         
-        checkSearchResultContaining(text: Config.notFoundError)
+        checkSearchResult(text: Config.notFoundError)
     }
     
     func testSearchWithValidQueries() {
@@ -56,10 +55,24 @@ class JokeGenUITests: XCTestCase {
         searchQueryTextField.tap()
         searchQueryTextField.typeText("cat")
         
-        checkSearchResultContaining(text: "cat")
+        checkSearchResult(text: Config.notFoundError, shouldExist: false)
         
+        searchQueryTextField.clearText()
         searchQueryTextField.typeText("dog")
         
-        checkSearchResultContaining(text: "dog")
+        checkSearchResult(text: Config.notFoundError, shouldExist: false)
+    }
+}
+
+extension XCUIElement {
+    func clearText() {
+        guard let stringValue = value as? String else {
+            XCTFail("Tried to clear and enter text into a non string value")
+            return
+        }
+        
+        tap()
+        let deleteString = stringValue.map { _ in  XCUIKeyboardKey.delete.rawValue}.joined()
+        typeText(deleteString)
     }
 }
