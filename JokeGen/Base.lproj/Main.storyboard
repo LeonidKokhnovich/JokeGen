@@ -17,12 +17,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search query, example: &quot;developer&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-nI-NVt">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eqx-Kb-JFq">
+                                <rect key="frame" x="16" y="58" width="343" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eqx-Kb-JFq" firstAttribute="top" secondItem="0xG-nI-NVt" secondAttribute="bottom" constant="8" id="HlY-Kz-DOn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xG-nI-NVt" secondAttribute="trailing" constant="16" id="L4b-Mi-LWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eqx-Kb-JFq" secondAttribute="trailing" constant="16" id="T1j-Oo-dE6"/>
+                            <constraint firstItem="Eqx-Kb-JFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TtL-SD-hhM"/>
+                            <constraint firstItem="0xG-nI-NVt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y7J-g1-PWY"/>
+                            <constraint firstItem="0xG-nI-NVt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZzE-J9-Boi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eqx-Kb-JFq" secondAttribute="bottom" constant="20" id="iCe-rc-M6H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchQueryTextField" destination="0xG-nI-NVt" id="qLm-Ve-ERx"/>
+                        <outlet property="textView" destination="Eqx-Kb-JFq" id="HZn-li-RqL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="96.7016491754123"/>
         </scene>
     </scenes>
 </document>
