@@ -19,27 +19,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search query, example: &quot;developer&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-nI-NVt">
-                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <rect key="frame" x="16" y="40" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eqx-Kb-JFq">
-                                <rect key="frame" x="16" y="58" width="343" height="589"/>
+                                <rect key="frame" x="16" y="109" width="343" height="538"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best joke" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5r-n1-CSm">
+                                <rect key="frame" x="16" y="78" width="343" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Eqx-Kb-JFq" firstAttribute="top" secondItem="0xG-nI-NVt" secondAttribute="bottom" constant="8" id="HlY-Kz-DOn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p5r-n1-CSm" secondAttribute="trailing" constant="16" id="8kj-Fe-rBi"/>
+                            <constraint firstItem="p5r-n1-CSm" firstAttribute="top" secondItem="0xG-nI-NVt" secondAttribute="bottom" constant="8" id="9xm-CN-yum"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xG-nI-NVt" secondAttribute="trailing" constant="16" id="L4b-Mi-LWg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eqx-Kb-JFq" secondAttribute="trailing" constant="16" id="T1j-Oo-dE6"/>
+                            <constraint firstItem="p5r-n1-CSm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TEN-a1-wLV"/>
                             <constraint firstItem="Eqx-Kb-JFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TtL-SD-hhM"/>
-                            <constraint firstItem="0xG-nI-NVt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y7J-g1-PWY"/>
+                            <constraint firstItem="0xG-nI-NVt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Y7J-g1-PWY"/>
                             <constraint firstItem="0xG-nI-NVt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZzE-J9-Boi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eqx-Kb-JFq" secondAttribute="bottom" constant="20" id="iCe-rc-M6H"/>
+                            <constraint firstItem="Eqx-Kb-JFq" firstAttribute="top" secondItem="p5r-n1-CSm" secondAttribute="bottom" constant="8" id="jDs-3T-sZa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

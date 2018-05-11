@@ -9,6 +9,10 @@
 import Foundation
 import ReactiveSwift
 
+protocol SearchJokeManagerType {
+    func search(by query: String) -> SignalProducer<SearchJokeQuery.Data.Joke, SearchJokeManagerError>
+}
+
 enum SearchJokeManagerError: Error, LocalizedError {
     case query(Error)
     case emptyData
@@ -21,10 +25,6 @@ enum SearchJokeManagerError: Error, LocalizedError {
             return error.localizedDescription
         }
     }
-}
-
-protocol SearchJokeManagerType {
-    func search(by query: String) -> SignalProducer<SearchJokeQuery.Data.Joke, SearchJokeManagerError>
 }
 
 class SearchJokeManager: SearchJokeManagerType {
@@ -54,6 +54,8 @@ class SearchJokeManager: SearchJokeManagerType {
                 observer.send(value: joke)
                 observer.sendCompleted()
             }
+            
+            // Cancel the query if it's not needed anymore...
             disposable.observeEnded({
                 cancellable.cancel()
             })

@@ -36,6 +36,10 @@ class SearchJokeViewModel: SearchJokeViewModelType {
         observeQueryUpdates()
     }
     
+    deinit {
+        updateResultDisposable?.dispose()
+    }
+    
     func observeQueryUpdates() {
         query.producer
             .debounce(Config.processInputQueryDelay, on: QueueScheduler.main)
