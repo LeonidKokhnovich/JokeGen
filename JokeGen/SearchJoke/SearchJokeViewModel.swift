@@ -15,18 +15,53 @@ protocol SearchJokeViewModelType {
 }
 
 class SearchJokeViewModel: SearchJokeViewModelType {
-    var query = MutableProperty<String?>(nil)
+    struct Config {
+        static let inputQueryThrottleTiming = 1.0
+    }
     
+    var query = MutableProperty<String?>(nil)
     var result: Property<String>
     // Make mutable property so it's not updated outside of the view model.
     private var mutableResult = MutableProperty<String>("")
     
-    init() {
+    private let searchJokeManager: SearchJokeManagerType
+    
+    init(searchJokeManager: SearchJokeManagerType = SearchJokeManager.shared) {
+        self.searchJokeManager = searchJokeManager
         result = Property(mutableResult)
         
-        query.producer.map { $0 ?? "" }.startWithValues { [weak self] (query) in
-            guard let strongSelf = self else { return }
-            strongSelf.mutableResult.value = query + query
+        observeQueryUpdates()
+    }
+    
+    func observeQueryUpdates() {
+        query.producer
+            .throttle(Config.inputQueryThrottleTiming, on: QueueScheduler.main)
+            .map { $0 ?? "" }
+            .startWithValues { [weak self] (query) in
+                guard let strongSelf = self else {
+                    print("Invalid self")
+                    return
+                }
+                
+                strongSelf.updateResult(by: query)
+        }
+    }
+    
+    func updateResult(by query: String) {
+        searchJokeManager.search(by: query)
+            .observe(on: UIScheduler())
+            .startWithResult { [weak self] (result) in
+                guard let strongSelf = self else {
+                    print("Invalid self")
+                    return
+                }
+                
+                switch result {
+                case .failure(let error):
+                    strongSelf.mutableResult.value = error.localizedDescription
+                case .success(let joke):
+                    strongSelf.mutableResult.value = joke.joke ?? "Not found"
+                }
         }
     }
 }

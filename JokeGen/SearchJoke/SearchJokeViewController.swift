@@ -14,17 +14,12 @@ class SearchJokeViewController: UIViewController {
     @IBOutlet weak var searchQueryTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
     
-    let viewModel = SearchJokeViewModel()
+    var viewModel: SearchJokeViewModelType = SearchJokeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel.query <~ searchQueryTextField.reactive.continuousTextValues
         textView.reactive.text <~ viewModel.result
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

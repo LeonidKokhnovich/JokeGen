@@ -7,28 +7,45 @@
 //
 
 import Foundation
+import ReactiveSwift
+
+enum SearchJokeManagerError: Error, LocalizedError {
+    case invalidAPI
+    case query(Error)
+    case emptyData
+}
 
 protocol SearchJokeManagerType {
-    func search(by query: String)
+    func search(by query: String) -> SignalProducer<SearchJokeQuery.Data.Joke, SearchJokeManagerError>
 }
 
 class SearchJokeManager: SearchJokeManagerType {
-    func search(by query: String) {
-        let query = SearchJokeQuery()
-        apollo.fetch(query: query) { [weak self] (result, error) in
-            guard error == nil else {
-                print("Failed request with error: \(error?.localizedDescription)")
-                return
+    // To simplify the project and not have dependency injection library, let's use singleton for injection.
+    static let shared = SearchJokeManager()
+    
+    func search(by query: String) -> SignalProducer<SearchJokeQuery.Data.Joke, SearchJokeManagerError> {
+        return SignalProducer { observer, _ in
+            print("Query joke by: \(query)")
+            
+            let query = SearchJokeQuery()
+            apollo.fetch(query: query) { (result, error) in
+                if let error = error {
+                    print("Failed request with error: \(error.localizedDescription)")
+                    observer.send(error: .query(error))
+                    return
+                }
+                
+                guard let joke = result?.data?.joke else {
+                    print("No joke found: \(result.debugDescription)")
+                    observer.send(error: .emptyData)
+                    return
+                }
+                
+                print("Retrieved joke: \(joke)")
+                
+                observer.send(value: joke)
+                observer.sendCompleted()
             }
-            
-            guard let joke = result?.data else {
-                print("No joke found: \(result.debugDescription)")
-                return
-            }
-            
-            
-            //            result?.data?.j
-            print("Joke: \(joke)")
         }
     }
 }
