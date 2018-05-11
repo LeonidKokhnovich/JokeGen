@@ -24,11 +24,11 @@ class SearchJokeManager: SearchJokeManagerType {
     static let shared = SearchJokeManager()
     
     func search(by query: String) -> SignalProducer<SearchJokeQuery.Data.Joke, SearchJokeManagerError> {
-        return SignalProducer { observer, _ in
+        return SignalProducer { observer, disposable in
             print("Query joke by: \(query)")
             
-            let query = SearchJokeQuery()
-            apollo.fetch(query: query) { (result, error) in
+            let query = SearchJokeQuery(query: query)
+            let cancellable = apollo.fetch(query: query) { (result, error) in
                 if let error = error {
                     print("Failed request with error: \(error.localizedDescription)")
                     observer.send(error: .query(error))
@@ -46,6 +46,9 @@ class SearchJokeManager: SearchJokeManagerType {
                 observer.send(value: joke)
                 observer.sendCompleted()
             }
+            disposable.observeEnded({
+                cancellable.cancel()
+            })
         }
     }
 }
