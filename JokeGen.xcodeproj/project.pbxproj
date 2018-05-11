@@ -21,6 +21,8 @@
 		8421669E20A53BD200BB632D /* SearchJokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669D20A53BD200BB632D /* SearchJokeManager.swift */; };
 		842166A020A547BD00BB632D /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669F20A547BD00BB632D /* LocalizedStrings.swift */; };
 		842166A220A54A8700BB632D /* SearchJokeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842166A120A54A8700BB632D /* SearchJokeViewModelTests.swift */; };
+		8470897120A55288006A6600 /* ApolloClientProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470897020A55288006A6600 /* ApolloClientProvider.swift */; };
+		8470897320A55356006A6600 /* SearchJokeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470897220A55356006A6600 /* SearchJokeManagerTests.swift */; };
 		CF6705BD927FAE316C11872A /* Pods_JokeGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D542DC4BDC4AA3396A23F51 /* Pods_JokeGen.framework */; };
 		D7A3A84946C40A98F9530EFA /* Pods_JokeGenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10580E2EA47F977C7A80133 /* Pods_JokeGenTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,8 @@
 		8421669D20A53BD200BB632D /* SearchJokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeManager.swift; sourceTree = "<group>"; };
 		8421669F20A547BD00BB632D /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		842166A120A54A8700BB632D /* SearchJokeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewModelTests.swift; sourceTree = "<group>"; };
+		8470897020A55288006A6600 /* ApolloClientProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClientProvider.swift; sourceTree = "<group>"; };
+		8470897220A55356006A6600 /* SearchJokeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeManagerTests.swift; sourceTree = "<group>"; };
 		8D542DC4BDC4AA3396A23F51 /* Pods_JokeGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JokeGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10580E2EA47F977C7A80133 /* Pods_JokeGenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JokeGenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56CA27934C017ADB3D5D7B3 /* Pods-JokeGen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokeGen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JokeGen/Pods-JokeGen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				842166A120A54A8700BB632D /* SearchJokeViewModelTests.swift */,
+				8470897220A55356006A6600 /* SearchJokeManagerTests.swift */,
 			);
 			path = SearchJoke;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 			children = (
 				8421669720A5311F00BB632D /* SearchJokeTableViewController.graphql */,
 				8421669520A5311400BB632D /* API.swift */,
+				8470897020A55288006A6600 /* ApolloClientProvider.swift */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -452,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8421669620A5311500BB632D /* API.swift in Sources */,
+				8470897120A55288006A6600 /* ApolloClientProvider.swift in Sources */,
 				8421669E20A53BD200BB632D /* SearchJokeManager.swift in Sources */,
 				2687F37F20A51CA2005BC8BD /* AppDelegate.swift in Sources */,
 				8421669A20A53B8700BB632D /* SearchJokeViewController.swift in Sources */,
@@ -464,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8470897320A55356006A6600 /* SearchJokeManagerTests.swift in Sources */,
 				840D199320A54B45009A5E24 /* SearchJokeManagerMock.swift in Sources */,
 				2687F39420A51CA2005BC8BD /* JokeGenTests.swift in Sources */,
 				842166A220A54A8700BB632D /* SearchJokeViewModelTests.swift in Sources */,

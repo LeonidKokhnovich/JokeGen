@@ -8,6 +8,7 @@
 
 import Foundation
 import ReactiveSwift
+import Apollo
 
 protocol SearchJokeManagerType {
     func search(by query: String) -> SignalProducer<SearchJokeQuery.Data.Joke, SearchJokeManagerError>
@@ -31,12 +32,19 @@ class SearchJokeManager: SearchJokeManagerType {
     // To simplify the project and not have dependency injection library, let's use singleton for injection.
     static let shared = SearchJokeManager()
     
+    // Dependencies
+    private let apollo: ApolloClient
+    
+    init(apollo: ApolloClient = ApolloClientProvider.shared.apollo) {
+        self.apollo = apollo
+    }
+    
     func search(by query: String) -> SignalProducer<SearchJokeQuery.Data.Joke, SearchJokeManagerError> {
         return SignalProducer { observer, disposable in
             print("Query joke by: \(query)")
             
             let query = SearchJokeQuery(query: query)
-            let cancellable = apollo.fetch(query: query) { (result, error) in
+            let cancellable = self.apollo.fetch(query: query) { (result, error) in
                 if let error = error {
                     print("Failed request with error: \(error.localizedDescription)")
                     observer.send(error: .query(error))

@@ -9,6 +9,10 @@
 import XCTest
 
 class JokeGenUITests: XCTestCase {
+    struct Config {
+        static let searchTimeout = 3.0
+        static let notFoundError = "Not found"
+    }
         
     override func setUp() {
         super.setUp()
@@ -28,9 +32,34 @@ class JokeGenUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func checkSearchResultContaining(text: String) {
+        let substringPredicate = NSPredicate(format: "%K contains %@", "text", text)
+        let label = XCUIApplication().textViews.containing(substringPredicate)
+        let existsPredicate = NSPredicate(format: "exists == 1")
+        
+        expectation(for: existsPredicate, evaluatedWith: label, handler: nil)
+        waitForExpectations(timeout: Config.searchTimeout, handler: nil)
     }
     
+    func testSearchWithInvalidQuery() {
+        let searchQueryTextField = XCUIApplication().textFields.firstMatch
+        XCTAssertTrue(searchQueryTextField.exists)
+        searchQueryTextField.tap()
+        searchQueryTextField.typeText("c")
+        
+        checkSearchResultContaining(text: Config.notFoundError)
+    }
+    
+    func testSearchWithValidQueries() {
+        let searchQueryTextField = XCUIApplication().textFields.firstMatch
+        XCTAssertTrue(searchQueryTextField.exists)
+        searchQueryTextField.tap()
+        searchQueryTextField.typeText("cat")
+        
+        checkSearchResultContaining(text: "cat")
+        
+        searchQueryTextField.typeText("dog")
+        
+        checkSearchResultContaining(text: "dog")
+    }
 }
