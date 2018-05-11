@@ -9,13 +9,13 @@
 import UIKit
 import Apollo
 
+let graphQLEndpoint = "https://icanhazdadjoke.com/graphql"
+let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    static let graphQLEndpoint = "https://icanhazdadjoke.com/graphql"
-    static let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

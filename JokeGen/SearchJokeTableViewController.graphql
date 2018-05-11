@@ -1,0 +1,11 @@
+fragment JokeFullDetails on Joke {
+    id
+    joke
+    permalink
+}
+
+query JokesDetails {
+    joke {
+        ...JokeFullDetails
+    }
+}
