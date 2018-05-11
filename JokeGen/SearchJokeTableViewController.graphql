@@ -1,11 +1,5 @@
-fragment JokeFullDetails on Joke {
-    id
-    joke
-    permalink
-}
-
-query JokesDetails {
-    joke {
-        ...JokeFullDetails
+query SearchJoke($query: String) {
+    joke(query: $query) {
+        joke
     }
 }

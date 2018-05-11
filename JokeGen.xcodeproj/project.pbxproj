@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2687F37F20A51CA2005BC8BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2687F37E20A51CA2005BC8BD /* AppDelegate.swift */; };
-		2687F38120A51CA2005BC8BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2687F38020A51CA2005BC8BD /* ViewController.swift */; };
 		2687F38420A51CA2005BC8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2687F38220A51CA2005BC8BD /* Main.storyboard */; };
 		2687F38620A51CA2005BC8BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2687F38520A51CA2005BC8BD /* Assets.xcassets */; };
 		2687F38920A51CA2005BC8BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2687F38720A51CA2005BC8BD /* LaunchScreen.storyboard */; };
@@ -16,6 +15,9 @@
 		2687F39F20A51CA2005BC8BD /* JokeGenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2687F39E20A51CA2005BC8BD /* JokeGenUITests.swift */; };
 		336C7CB08AF20638246ACAEE /* Pods_JokeGenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6358ED5AC7BCBA7AB1173FC5 /* Pods_JokeGenUITests.framework */; };
 		8421669620A5311500BB632D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669520A5311400BB632D /* API.swift */; };
+		8421669A20A53B8700BB632D /* SearchJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669920A53B8700BB632D /* SearchJokeViewController.swift */; };
+		8421669C20A53B9300BB632D /* SearchJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669B20A53B9300BB632D /* SearchJokeViewModel.swift */; };
+		8421669E20A53BD200BB632D /* SearchJokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421669D20A53BD200BB632D /* SearchJokeManager.swift */; };
 		CF6705BD927FAE316C11872A /* Pods_JokeGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D542DC4BDC4AA3396A23F51 /* Pods_JokeGen.framework */; };
 		D7A3A84946C40A98F9530EFA /* Pods_JokeGenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10580E2EA47F977C7A80133 /* Pods_JokeGenTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +42,6 @@
 /* Begin PBXFileReference section */
 		2687F37B20A51CA2005BC8BD /* JokeGen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokeGen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2687F37E20A51CA2005BC8BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2687F38020A51CA2005BC8BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2687F38320A51CA2005BC8BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2687F38520A51CA2005BC8BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2687F38820A51CA2005BC8BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 		70018CB2E60CA91E4EF529F1 /* Pods-JokeGenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokeGenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JokeGenTests/Pods-JokeGenTests.release.xcconfig"; sourceTree = "<group>"; };
 		8421669520A5311400BB632D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = JokeGen/API.swift; sourceTree = SOURCE_ROOT; };
 		8421669720A5311F00BB632D /* SearchJokeTableViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; name = SearchJokeTableViewController.graphql; path = JokeGen/SearchJokeTableViewController.graphql; sourceTree = SOURCE_ROOT; };
+		8421669920A53B8700BB632D /* SearchJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewController.swift; sourceTree = "<group>"; };
+		8421669B20A53B9300BB632D /* SearchJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeViewModel.swift; sourceTree = "<group>"; };
+		8421669D20A53BD200BB632D /* SearchJokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJokeManager.swift; sourceTree = "<group>"; };
 		8D542DC4BDC4AA3396A23F51 /* Pods_JokeGen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JokeGen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10580E2EA47F977C7A80133 /* Pods_JokeGenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JokeGenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56CA27934C017ADB3D5D7B3 /* Pods-JokeGen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokeGen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JokeGen/Pods-JokeGen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,9 +121,9 @@
 		2687F37D20A51CA2005BC8BD /* JokeGen */ = {
 			isa = PBXGroup;
 			children = (
+				8421669820A53B7400BB632D /* SearchJoke */,
 				8421669420A5310300BB632D /* GraphQL */,
 				2687F37E20A51CA2005BC8BD /* AppDelegate.swift */,
-				2687F38020A51CA2005BC8BD /* ViewController.swift */,
 				2687F38220A51CA2005BC8BD /* Main.storyboard */,
 				2687F38520A51CA2005BC8BD /* Assets.xcassets */,
 				2687F38720A51CA2005BC8BD /* LaunchScreen.storyboard */,
@@ -176,6 +180,16 @@
 				8421669520A5311400BB632D /* API.swift */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		8421669820A53B7400BB632D /* SearchJoke */ = {
+			isa = PBXGroup;
+			children = (
+				8421669920A53B8700BB632D /* SearchJokeViewController.swift */,
+				8421669B20A53B9300BB632D /* SearchJokeViewModel.swift */,
+				8421669D20A53BD200BB632D /* SearchJokeManager.swift */,
+			);
+			path = SearchJoke;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,9 +420,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2687F38120A51CA2005BC8BD /* ViewController.swift in Sources */,
 				8421669620A5311500BB632D /* API.swift in Sources */,
+				8421669E20A53BD200BB632D /* SearchJokeManager.swift in Sources */,
 				2687F37F20A51CA2005BC8BD /* AppDelegate.swift in Sources */,
+				8421669A20A53B8700BB632D /* SearchJokeViewController.swift in Sources */,
+				8421669C20A53B9300BB632D /* SearchJokeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
